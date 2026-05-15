@@ -15,7 +15,7 @@
                     <div class="card-body py-5">
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <h1 class="display-5 fw-bold mb-3">Pemilihan Ketua OSIS {{ date('Y')}}/{{date('Y')+1}}</h1>
+                                <h1 class="display-5 fw-bold mb-3">Pemilihan Ketua PENA {{ date('Y')}}/{{date('Y')+1}}</h1>
                                 <p class="lead mb-0">Suaramu Menentukan Pemimpin Masa Depan</p>
                                 @if (session('success'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -136,7 +136,7 @@
                 <div class="card border-0 shadow-sm">
                     <div class="card-header bg-white border-0 py-3">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Kandidat Ketua OSIS</h5>
+                            <h5 class="mb-0">Kandidat Ketua PENA</h5>
                             <span class="badge bg-primary">{{ $candidates->count() }} Kandidat</span>
                         </div>
                     </div>
