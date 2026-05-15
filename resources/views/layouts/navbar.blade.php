@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-            <img src="{{ asset('assets/images/logo.png') }}" class="rounded-circle" width="100" alt="logo">
+            <img src="{{ asset('assets/images/logo.png') }}" class="rounded-circle" width="50" alt="logo">
             {{-- <div class="">
                 <h4 class="text-primary m-0" style="font-size: 1rem">SIP-Ketos</h4>
                 <p class="text-muted m-0" style="font-size: 7px">Sistem Informasi Pemilihan Ketua Osis</p>

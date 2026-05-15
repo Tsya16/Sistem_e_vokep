@@ -2,7 +2,7 @@
 @extends('layouts.base')
 
 @section('title')
-    Beranda - Pemilihan Ketua OSIS
+    Beranda - Pemilihan Ketua PENA
 @endsection
 
 @section('content')
