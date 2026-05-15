@@ -1,66 +1,158 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Dokumentasi Install Project Laravel dari Clone GitHub
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Clone Repository dari GitHub
 
-## About Laravel
+Buka terminal atau CMD, lalu jalankan perintah berikut:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```bash
+git clone https://github.com/nama-user/nama-project.git
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Contoh:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+git clone https://github.com/username/project-laravel.git
+```
 
-## Learning Laravel
+Masuk ke folder project:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+cd nama-project
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 2. Install Dependency Laravel
 
-## Laravel Sponsors
+Jalankan perintah berikut untuk menginstall semua dependency Laravel menggunakan Composer:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+composer install
+```
 
-### Premium Partners
+Tunggu hingga proses selesai.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## 3. Copy File Environment
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Salin file `.env.example` menjadi `.env`
 
-## Code of Conduct
+### Windows
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+copy .env.example .env
+```
 
-## Security Vulnerabilities
+### Linux / Mac
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+cp .env.example .env
+```
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 4. Generate Application Key
+
+Jalankan perintah berikut:
+
+```bash
+php artisan key:generate
+```
+
+Jika berhasil akan muncul:
+
+```bash
+Application key set successfully.
+```
+
+---
+
+## 5. Atur Koneksi Database
+
+Buka file `.env`, lalu ubah bagian database sesuai database yang digunakan.
+
+Contoh:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_e_vokep
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+## 6. Buat Database
+
+Buka phpMyAdmin atau MySQL lalu buat database baru.
+
+Contoh nama database:
+
+```text
+db_e_vokep
+```
+
+---
+
+## 7. Jalankan Migration
+
+Jalankan perintah berikut untuk membuat tabel database:
+
+```bash
+php artisan migrate
+```
+
+Jika project memiliki seeder:
+
+```bash
+php artisan db:seed
+```
+
+Atau:
+
+```bash
+php artisan migrate --seed
+```
+
+---
+
+## 8. Jalankan Project Laravel
+
+Gunakan perintah berikut:
+
+```bash
+php artisan serve
+```
+
+Jika berhasil akan muncul:
+
+```text
+Starting Laravel development server: http://127.0.0.1:8000
+```
+
+Buka browser lalu akses:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+# Persyaratan Sebelum Install
+
+Pastikan perangkat sudah terinstall:
+
+- PHP
+- Composer
+- MySQL / MariaDB
+- Git
+- Laravel
+
+---
+
+# Penutup
+
+Dengan mengikuti langkah-langkah di atas, project Laravel yang berasal dari GitHub dapat dijalankan di komputer lokal dengan benar. Pastikan seluruh dependency berhasil diinstall dan konfigurasi database sesuai agar aplikasi dapat berjalan tanpa error.
