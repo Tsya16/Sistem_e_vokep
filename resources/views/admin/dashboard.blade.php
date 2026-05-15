@@ -2,7 +2,7 @@
 @extends('admin.layouts.base')
 
 @section('title')
-    Dashboard Pemilihan Ketua OSIS
+    Dashboard Pemilihan Ketua PENA
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <h4 class="mb-1 fw-semibold">Dashboard Pemilihan Ketua OSIS</h4>
+                        <h4 class="mb-1 fw-semibold">Dashboard Pemilihan Ketua PENA</h4>
                         <p class="text-muted mb-0">Hasil Perolehan Suara Real-time</p>
                     </div>
                     <div class="text-end">

@@ -2,7 +2,7 @@
 @extends('admin.layouts.base')
 
 @section('title')
-    Data Kandidat Ketua OSIS
+    Data Kandidat Ketua PENA
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
             <div class="row align-items-center">
                 <div class="col-md-12">
                     <div class="page-header-title">
-                        <h2 class="mb-0 text-wrap">Data Kandidat Calon Ketua Osis</h2>
+                        <h2 class="mb-0 text-wrap">Data Kandidat Calon Ketua PENA</h2>
                     </div>
                 </div>
             </div>
