@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('title')
-    Voting - Pemilihan Ketua OSIS
+    Voting - Pemilihan Ketua PENA
 @endsection
 
 @section('content')
@@ -63,7 +63,7 @@
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body text-center py-4">
-                            <h2 class="fw-bold mb-2">Pilih Calon Ketua OSIS</h2>
+                            <h2 class="fw-bold mb-2">Pilih Calon Ketua Umum PENA</h2>
                             <p class="text-muted mb-0">Pilih salah satu kandidat di bawah ini. Pilihan Anda tidak dapat
                                 diubah setelah dikirim.</p>
                         </div>

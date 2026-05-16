@@ -39,9 +39,9 @@
                     @enderror
                 </div>
                 <div class="form-group mb-3">
-                    <label class="form-label" for="nis">Nomor Induk Siswa</label>
+                    <label class="form-label" for="nis">Nomor Induk Mahasiswa</label>
                     <input type="text" id="nis" name="nis" value="{{ old('nis') }}" class="form-control"
-                        placeholder="Nomor Induk Siswa" autocomplete="off">
+                        placeholder="Nomor Induk Mahasiswa" autocomplete="off">
                     @error('nis')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
